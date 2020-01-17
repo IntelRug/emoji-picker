@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="emoji-picker.js"></script>
+    <link rel="stylesheet" href="emoji-picker.css">
+    <title>Emoji-Picker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .page {
+            height: 100%;
+        }
+
+        .page__body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page__chat {
+            width: 450px;
+        }
+
+        .chat__messages {
+            height: 500px;
+            border: 1px solid #aaaaaa;
+        }
+
+        .chat__input {
+            display: flex;
+            margin-top: 4px;
+        }
+
+        .chat__textarea-container {
+            position: relative;
+            flex-grow: 1;
+            margin-right: 4px;
+        }
+
+        .chat__textarea {
+            height: 40px;
+            width: 100%;
+            margin: 0;
+            padding: 4px 50px 4px 8px;
+            resize: none;
+            font-size: 18px;
+            border: 1px solid #aaaaaa;
+        }
+
+        .chat__emoji-button {
+            position: absolute;
+            top: 0;
+            right: 16px;
+            padding: 0;
+            cursor: pointer;
+            font-size: 22px;
+            line-height: 40px;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .chat__emoji-button:focus {
+            outline: none;
+        }
+
+        .chat__emoji-picker {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 8px);
+        }
+
+        .chat__send-button {
+            height: 40px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+</head>
+<body class="page__body">
+    <div class="page__chat">
+        <div class="chat">
+            <div class="chat__messages">
+                <div class="chat__messages-item"></div>
+                <div class="chat__messages-item"></div>
+                <div class="chat__messages-item"></div>
+                <div class="chat__messages-item"></div>
+                <div class="chat__messages-item"></div>
+                <div class="chat__messages-item"></div>
+            </div>
+            <div class="chat__input">
+                <div class="chat__textarea-container">
+                    <textarea class="chat__textarea js-emoji-textarea"></textarea>
+                    <button class="chat__emoji-button js-emoji-button">😃</button>
+                    <div class="chat__emoji-picker js-emoji-container"></div>
+                </div>
+                <button class="chat__send-button">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

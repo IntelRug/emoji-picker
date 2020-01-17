@@ -1,0 +1,34 @@
+.emoji-picker {
+    overflow-y: auto;
+    display: none;
+    max-height: 200px;
+    width: 290px;
+    padding: 8px;
+    background-color: #eaeaea;
+    border: 1px solid #aaaaaa;
+}
+
+.emoji-picker_active {
+    display: block;
+}
+
+.emoji-picker__group-title {
+    padding: 4px 4px;
+}
+
+.emoji-picker__group {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-bottom: 8px;
+}
+
+.emoji-picker__item {
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease;
+    user-select: none;
+}
+
+.emoji-picker__item:hover {
+    background-color: #bbbbbb;
+}
